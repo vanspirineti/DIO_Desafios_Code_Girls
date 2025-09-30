@@ -11,9 +11,11 @@ Será demonstrado como os serviços da AWS trabalham de forma dinâmica e eficie
 ![alt text](./images/AWS_Diagrama_Loja_Dept.png)
 
 
+---
 
 ## 🎲 Descrição detalhada da arquitetura: 
 
+---
 
 1️⃣ Os usuários conseguem acessar o servidor de Aplicação, conseguindo verificar informações da loja como pedidos e situação do estoque. Acessam também o WebServer da Loja de departamentos de forma indireta obviamente.
 
@@ -34,20 +36,38 @@ Será demonstrado como os serviços da AWS trabalham de forma dinâmica e eficie
 **Benefícios:** Acesso fácil e rápido aos dados, além de integração com outros serviços da AWS.
 
 6️⃣ Temos o uso do **AWS Lambda** aplicado de diversas formas em nossa arquitetura \
-             
-   **Exemplo 3:** Processamento de Eventos do Site:\
+ 
+ 
+ **Exemplo 1:** Processamento de Pedidos em Tempo Real: \
+        - Gatilho: Um novo pedido é registrado no RDS (banco de dados de pedidos).\
+        - Lambda: Uma função Lambda é acionada para processar o pedido. Ela pode:\
+        - Atualizar o estoque no RDS.\
+        - Enviar um e-mail de confirmação ao cliente (integrando com serviços como SES).\
+        - Notificar o sistema de logística.\
+       *Serviços Envolvidos:* RDS, Lambda, S3 (para logs, se necessário).
+       
+ **Exemplo 2:** Gerenciamento de Imagens de Produtos:\
+        - Gatilho: Uma nova imagem de produto é carregada para um bucket específico no S3.\
+        - Lambda: Uma função Lambda é acionada para:\
+        - Redimensionar a imagem para diferentes resoluções (miniaturas, visualização principal).\
+        - Otimizar a imagem para web.\
+        - Salvar as versões processadas de volta no S3.\
+       *Serviços Envolvidos:* S3, Lambda.
+    
+ **Exemplo 3:** Processamento de Eventos do Site:\
         - Gatilho: Interações do usuário no site hospedado no EC2 (ex: adições ao carrinho, visualizações de produtos).\
         - Lambda: Funções Lambda podem ser usadas para coletar dados de eventos, realizar análises em tempo real ou acionar                      notificações. \
         *Serviços Envolvidos:* EC2, Lambda, S3 (para armazenamento de dados de eventos).
 
+---
 
 
 ## 💭 Resumo Geral do Fluxo
 
-EC2 (Site/Apps) -> Interage com RDS (Dados) e S3 (Imagens).
-RDS (Dados) -> Aciona Lambda para processamento de pedidos e atualizações.
-S3 (Imagens) -> Aciona Lambda para otimização e redimensionamento.
-Lambda -> Pode escrever logs em S3, atualizar RDS, ou interagir com outros serviços AWS.
-EBS -> Usado pelo EC2 para armazenamento persistente do sistema operacional e dados locais, com backups gerenciados por Lambda agendado.
+✔ EC2 (Site/Apps) -> Interage com RDS (Dados) e S3 (Imagens).\
+✔ RDS (Dados) -> Aciona Lambda para processamento de pedidos e atualizações.\
+✔ S3 (Imagens) -> Aciona Lambda para otimização e redimensionamento.\
+✔ Lambda -> Pode escrever logs em S3, atualizar RDS, ou interagir com outros serviços AWS.\
+✔ EBS -> Usado pelo EC2 para armazenamento persistente do sistema operacional e dados locais, com backups gerenciados por Lambda agendado.
 
 ---
