@@ -5,7 +5,8 @@ Será demonstrado como os serviços da AWS trabalham de forma dinâmica e eficie
 
 ---
 
-## 🔷 Diagrama de arquitetura modelo da Loja de Departamentos 
+## 🔷 Diagrama de arquitetura modelo da Loja de Departamentos
+
 ![alt text](./images/loja_departamentos_EC2.jpg)
 
 ## ⏭ Descrição detalhada da arquitetura:
