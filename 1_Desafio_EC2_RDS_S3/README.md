@@ -7,7 +7,7 @@ Será demonstrado como os serviços da AWS trabalham de forma dinâmica e eficie
 
 ## 🔷 Diagrama de arquitetura modelo da Loja de Departamentos
 
-![alt text](1_Desafio_EC2_RDS_S3/images/AWS_Diagrama_Loja_Dept.png)
+![alt text]()
 
 
 
@@ -31,26 +31,27 @@ Será demonstrado como os serviços da AWS trabalham de forma dinâmica e eficie
 **Uso na loja:** Armazenar imagens de produtos, documentos e backups de dados.
 **Benefícios:** Acesso fácil e rápido aos dados, além de integração com outros serviços da AWS.
 
-6. Temos o uso do **AWS Lambda** aplicado de diversas formas em nossa arquitetura.
-   **Exemplo 1:** Processamento de Pedidos em Tempo Real:
-        - Gatilho: Um novo pedido é registrado no RDS (banco de dados de pedidos).
-        - Lambda: Uma função Lambda é acionada para processar o pedido. Ela pode:
+6. Temos o uso do **AWS Lambda** aplicado de diversas formas em nossa arquitetura. \
+   
+     **Exemplo 1:** Processamento de Pedidos em Tempo Real: \
+        - Gatilho: Um novo pedido é registrado no RDS (banco de dados de pedidos).\
+        - Lambda: Uma função Lambda é acionada para processar o pedido. Ela pode:\
         - Atualizar o estoque no RDS.
-        - Enviar um e-mail de confirmação ao cliente (integrando com serviços como SES).
-        - Notificar o sistema de logística.
+        - Enviar um e-mail de confirmação ao cliente (integrando com serviços como SES).\
+        - Notificar o sistema de logística.\
        *Serviços Envolvidos:* RDS, Lambda, S3 (para logs, se necessário).
    
-    **Exemplo 2:** Gerenciamento de Imagens de Produtos:
-        - Gatilho: Uma nova imagem de produto é carregada para um bucket específico no S3.
-        - Lambda: Uma função Lambda é acionada para:
-        - Redimensionar a imagem para diferentes resoluções (miniaturas, visualização principal).
-        - Otimizar a imagem para web.
-        - Salvar as versões processadas de volta no S3.
+    **Exemplo 2:** Gerenciamento de Imagens de Produtos:\
+        - Gatilho: Uma nova imagem de produto é carregada para um bucket específico no S3.\
+        - Lambda: Uma função Lambda é acionada para:\
+        - Redimensionar a imagem para diferentes resoluções (miniaturas, visualização principal).\
+        - Otimizar a imagem para web.\
+        - Salvar as versões processadas de volta no S3.\
        *Serviços Envolvidos:* S3, Lambda.
 
-   **Exemplo 3:** Processamento de Eventos do Site:
-        - Gatilho: Interações do usuário no site hospedado no EC2 (ex: adições ao carrinho, visualizações de produtos).
-        - Lambda: Funções Lambda podem ser usadas para coletar dados de eventos, realizar análises em tempo real ou acionar                      notificações.
+   **Exemplo 3:** Processamento de Eventos do Site:\
+        - Gatilho: Interações do usuário no site hospedado no EC2 (ex: adições ao carrinho, visualizações de produtos).\
+        - Lambda: Funções Lambda podem ser usadas para coletar dados de eventos, realizar análises em tempo real ou acionar                      notificações. \
         *Serviços Envolvidos:* EC2, Lambda, S3 (para armazenamento de dados de eventos).
 
 Fluxo Geral com Lambda:
