@@ -41,17 +41,14 @@ _🥇 O CloudFormation oferece diversos benefícios, como:_
  ✔ AWS Management Console - Para criar um stack, você pode usar a interface do AWS Management Console. \
  ✔ AWS SDK -  O AWS SDK permite que você trabalhe com templates do CloudFormation. Você pode criar, atualizar ou excluir stacks usando os métodos disponíveis no SDK, que variam conforme a linguagem de programação que você está utilizando (como Python, Java, .NET, etc.).
 
-
-![Passo_1](https://github.com/vanspirineti/DIO_Desafios_Code_Girls/blob/01f3f9c8d74c8299961618296bbd8f1739c8bbcf/2_Desafio_Step_Functions/images/1_Passo_Criacao_Migracao_Dados.png)
-
-![Passo_2](https://github.com/vanspirineti/DIO_Desafios_Code_Girls/blob/2f2718b8f38b0c5d0141ed3666f0ed3a5d3d23b4/2_Desafio_Step_Functions/images/2_Passo_Carrega_Dados_Bucket.png)
-
-![Passo_3](https://github.com/vanspirineti/DIO_Desafios_Code_Girls/blob/2f2718b8f38b0c5d0141ed3666f0ed3a5d3d23b4/2_Desafio_Step_Functions/images/3_Passo_Tratamento_Dados.PNG)
+---
+## 🎲 Conteúdos:
 
 
+![Criando Modelo](https://github.com/vanspirineti/DIO_Desafios_Code_Girls/blob/5de8b780346729078e5a4f12aae5a82f57b9c3b3/3_Desafio_CloudFormation/images/Modelo_Criacao_Composer.PNG)
 
+![Salvando Modelo](https://github.com/vanspirineti/DIO_Desafios_Code_Girls/blob/5de8b780346729078e5a4f12aae5a82f57b9c3b3/3_Desafio_CloudFormation/images/Salvando_Modelo.png)
 
-
-
+![YUML](https://github.com/vanspirineti/DIO_Desafios_Code_Girls/blob/5de8b780346729078e5a4f12aae5a82f57b9c3b3/3_Desafio_CloudFormation/images/Salvando_Modelo.png)
 
 
