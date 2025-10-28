@@ -8,7 +8,7 @@ Será demonstrado como os serviços da AWS trabalham de forma dinâmica e eficie
 ## 🎯 Diagrama de arquitetura modelo da Loja de Departamentos
 
 
-![Text](./1_Desafio_EC2_RDS_S3/images/AWS_Diagrama_Loja_Dept.png)
+![Text](https://github.com/vanspirineti/DIO_Desafios_Code_Girls/blob/3e89dec79a69de6128428a0c6bdb3d91dabe7095/1_Desafio_EC2_RDS_S3/images/AWS_Diagrama_Loja_Dept.png)
 
 ---
 
