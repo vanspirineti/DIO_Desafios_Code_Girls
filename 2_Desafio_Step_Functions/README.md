@@ -7,11 +7,11 @@ para ETL de Dados.
 ## 🎯 Modelo AWS Step Functions ETL + S3 + Atena 
 
 
-![alt text](https://github.com/vanspirineti/DIO_Desafios_Code_Girls/blob/01f3f9c8d74c8299961618296bbd8f1739c8bbcf/2_Desafio_Step_Functions/images/1_Passo_Criacao_Migracao_Dados.png)
+![Passo_1](https://github.com/vanspirineti/DIO_Desafios_Code_Girls/blob/01f3f9c8d74c8299961618296bbd8f1739c8bbcf/2_Desafio_Step_Functions/images/1_Passo_Criacao_Migracao_Dados.png)
 
-![alt text](./images/2_Passo_Carrega_Dados_Bucket.png)
+![Passo_2](./images/2_Passo_Carrega_Dados_Bucket.png)
 
-![alt text](./images/3_Passo_Tratamento_Dados.png)
+![Passo_3](./images/3_Passo_Tratamento_Dados.png)
 
 
 ---
