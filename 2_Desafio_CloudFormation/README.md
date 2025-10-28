@@ -34,13 +34,12 @@ _🥇 O CloudFormation oferece diversos benefícios, como:_
 
 ## 🎲 Integrações: 
 
+
+
+
  ✔ AWS CLI - Você pode usar a AWS CLI para interagir com o CloudFormation para criar, atualizar e excluir pilhas, entre outras operações. \
  ✔ AWS Management Console - Para criar um stack, você pode usar a interface do AWS Management Console. \
- ✔ AWS SDK -  O AWS SDK permite que você trabalhe com templates do CloudFormation. Você pode criar, atualizar ou excluir stacks usando os métodos disponíveis no SDK, que variam conforme a linguagem de programação que você está utilizando (como Python, Java, .NET, etc.). \ 
----
-
-
-
+ ✔ AWS SDK -  O AWS SDK permite que você trabalhe com templates do CloudFormation. Você pode criar, atualizar ou excluir stacks usando os métodos disponíveis no SDK, que variam conforme a linguagem de programação que você está utilizando (como Python, Java, .NET, etc.).
 
 
 ![Passo_1](https://github.com/vanspirineti/DIO_Desafios_Code_Girls/blob/01f3f9c8d74c8299961618296bbd8f1739c8bbcf/2_Desafio_Step_Functions/images/1_Passo_Criacao_Migracao_Dados.png)
