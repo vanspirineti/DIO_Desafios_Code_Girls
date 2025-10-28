@@ -1,6 +1,6 @@
 # ✅ Segundo Desafio - Criando um Fluxo no AWS Step Funcions
 
-Veremos abaixo a resolução do desafio 2 do Bootcamp Santander Code Girls 2025. Nesse exemplo usarei um caso de uso do Step Functions
+Criaremos abaixo a resolução do desafio 2 do Bootcamp Santander Code Girls 2025. Nesse exemplo usarei um caso de uso do Step Functions
 para ETL de Dados.
 ---
 
