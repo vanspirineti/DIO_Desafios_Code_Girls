@@ -49,6 +49,6 @@ _🥇 O CloudFormation oferece diversos benefícios, como:_
 
 ![Salvando Modelo](https://github.com/vanspirineti/DIO_Desafios_Code_Girls/blob/5de8b780346729078e5a4f12aae5a82f57b9c3b3/3_Desafio_CloudFormation/images/Salvando_Modelo.png)
 
-![YUML](https://github.com/vanspirineti/DIO_Desafios_Code_Girls/blob/5de8b780346729078e5a4f12aae5a82f57b9c3b3/3_Desafio_CloudFormation/images/Salvando_Modelo.png)
+![YUML](https://github.com/vanspirineti/DIO_Desafios_Code_Girls/blob/5daae0f2f90d27f6695398f85c94d40e1b248733/3_Desafio_CloudFormation/template.yaml)
 
 
