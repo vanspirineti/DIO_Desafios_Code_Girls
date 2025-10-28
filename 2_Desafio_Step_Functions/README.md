@@ -7,9 +7,9 @@ para ETL de Dados.
 ## 🎯 Modelo AWS Step Functions ETL + S3 + Atena 
 
 
-![alt text](./images/1_Passo_ Criacao_Migracao_Dados.png)
+![alt text](./images/1_Passo_Criacao_Migracao_Dados.png)
 
-![alt text](./images/2_Passo_Carrega dados_ Bucket.png)
+![alt text](./images/2_Passo_Carrega_Dados_Bucket.png)
 
 ![alt text](./images/3_Passo_Tratamento_Dados.png)
 
