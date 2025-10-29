@@ -7,7 +7,7 @@ _Será explorado alguns conceitos do uso do Cloud Formation_
 
 ## 🎯 Conceitos de Uso do AWS Cloud Formation:
 
-_O AWS CloudFormation é um serviço que permite modelar, provisionar e gerenciar recursos da AWS e de terceiros utilizando o conceito de Infraestrutura como Código (IaC)._ \
+_O AWS CloudFormation é um serviço que permite modelar, provisionar e gerenciar recursos da AWS e de terceiros utilizando o conceito de Infraestrutura como Código (IaC)._ 
 
 _🥇 O CloudFormation oferece diversos benefícios, como:_
 
