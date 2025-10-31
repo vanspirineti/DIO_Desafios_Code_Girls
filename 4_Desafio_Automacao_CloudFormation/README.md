@@ -1,13 +1,17 @@
 # ✅ Quarto Desafio - Projeto de Automação no AWS Cloud Formation
 
-_Veremos abaixo a resolução do desafio 4 do Bootcamp Santander Code Girls 2025._ 
-_Será resumido a criação de um projeto de automação com AWS Cloud Formation onde criaremos um ambiente de testes, este ambiente será destruído após seu uso e realização de testes. Com nosso template de código YAML o ambiente pode ser criado, usado e destruído sempre que necessário_
+_Veremos abaixo a resolução do desafio 4 do Bootcamp Santander Code Girls 2025._ \
+_Será resumido a criação de um projeto de automação com AWS Cloud Formation onde criaremos um ambiente de testes contendo
+uma instâmcia EC2 na qual será instalado um Banco de Dados MySQL._ \
+_Este ambiente pode ser usado para testes em uma base de dados fora de seu ambiente de produção. O ambiente destruído após seu uso e realização de testes necessários. Optei por usar o MySQL dentro da própria instância EC2 para efeito de redução de custos_ \
+_Com nosso template de código YAML o ambiente pode ser criado, usado e destruído sempre que necessário_ \
+
 
 ---
 
-## 🎯 Conceitos de Uso do AWS Cloud Formation:
+## ⚙️ Passo a passo da implantação.
 
-_O AWS CloudFormation é um serviço que permite modelar, provisionar e gerenciar recursos da AWS e de terceiros utilizando o conceito de Infraestrutura como Código (IaC)._ 
+_Vamos acompanhar os passos a seguir para criação de nosso ambiente de testes._ 
 
 _🥇 O CloudFormation oferece diversos benefícios, como:_
 
