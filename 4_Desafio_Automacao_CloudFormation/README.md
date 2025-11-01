@@ -1,35 +1,45 @@
-# ✅ Quarto Desafio - Projeto de Automação no AWS Cloud Formation
+ # ✅ Quarto Desafio - Projeto de Automação no AWS Cloud Formation
 
 _Veremos abaixo a resolução do desafio 4 do Bootcamp Santander Code Girls 2025._ \
-_Será resumido a criação de um projeto de automação com AWS Cloud Formation onde criaremos um ambiente de testes contendo
-uma instâmcia EC2 na qual será instalado um Banco de Dados MySQL._ \
-_Este ambiente pode ser usado para testes em uma base de dados fora de seu ambiente de produção. O ambiente destruído após seu uso e realização de testes necessários. Optei por usar o MySQL dentro da própria instância EC2 para efeito de redução de custos_ \
+_Será resumido a criação de uma stack com AWS Cloud Formation onde criaremos um ambiente de testes contendo: Uma VPC, uma sub-rede e uma instâmcia EC2._ \
+_Este ambiente pode ser usado para testes fora de seu ambiente de produção. O ambiente pode ser destruído após seu uso e realização de testes necessários._ \
 _Com nosso template de código YAML o ambiente pode ser criado, usado e destruído sempre que necessário_ \
-
 
 ---
 
 ## ⚙️ Passo a passo da implantação.
 
-_Vamos acompanhar os passos a seguir para criação de nosso ambiente de testes._ 
+_A criação de uma stack é relativamente simples, se tiver todos os parâmetros de sua criação pré-definidos, é sempre aconselhável fazer uma mapeamento detalhado de sua stack. Para análise de uso e redução de custos na criaçõ de recursos dentro da AWS._ \
 
-_🥇 O CloudFormation oferece diversos benefícios, como:_
+_Vamos acompanhar os passos a seguir para criação de nosso ambiente de testes._ \
+
+1️⃣ Primeiro vamos acessar nossa conta AWS com um usuário que tenha as devidas permições para criação de uma Stack e de recursos, assim podemos acessar o AWS Cloud Formation, sempre se certifique de estar na região correta para criação da stack e dos recursos.
+
+2️⃣ Selecionaremos a opção de criação de Stack, teremos a opção de criação a partir de um modelo, e faremos o upload do nosso arquivo YAML.
+
+3️⃣ Após carregamento do arquivo podemos visualizar no Infrastructure Composer seu stack, e lá mesmo podemos também editar nosso arquivo YAML caso necessário e validá-lo
+
+![Infrastructure Composer](https://github.com/vanspirineti/DIO_Desafios_Code_Girls/blob/5de8b780346729078e5a4f12aae5a82f57b9c3b3/3_Desafio_CloudFormation/images/Modelo.PNG)
+
+4️⃣ Após todas as alterações necessárias, podemos seguir com a criação da Stack, será solicitado o nome que daremos a Stack que está sendo criada, e seus parâmetros.
+
+![Cracao Stack](https://github.com/vanspirineti/DIO_Desafios_Code_Girls/blob/5de8b780346729078e5a4f12aae5a82f57b9c3b3/3_Desafio_CloudFormation/images/Modelo.PNG)
+
+5️⃣ Em seguida podemos selecionar Tags, opções da stack no caso de falhas, configurações de segurança e de notificações da Stack.
+
+6️⃣ O úlitmo passo é revisar todas as informações conffirmar a criação da Stack.
+
+7️⃣ Nesse momento todos os recursos serão criados e poderão ser visualizados posteriormente no painel de gerenciamento
+
 
 * _Automação: Provisiona e configura recursos automaticamente com base nos modelos._
 * _Reutilização: Permite replicar a infraestrutura em várias regiões ou contas reutilizando os mesmos modelos._
 * _Controle de Alterações: Facilita o rastreamento de mudanças na infraestrutura, semelhante ao controle de versão de código._
 * _Escalabilidade: Suporta desde configurações simples até arquiteturas complexas e multirregionais._
 
-### _Há pelo menos duas formas básicas de criar uma Stack com o AWS Cloud Formation:_ ###
-
-
-1️⃣ Infrastructure Composer: Ferramenta de design visual que permite criar e configurar aplicativos de forma dinâmica.
-
 >> Dica: Voce pode criar no Infrastructure Composer uma base modelo para seu Stack , após validar,
 >> você pode salvar o arquivo YAML e editá-lo posteriormente conforme a necessidade.
 
-
-2️⃣ Selecionar Modelo Existente: Você pode criar seu stack através de um modelo existente da AWS, ou fazer o upload de um arquivo com as configurações, e ainda temos a opção de selecionar diretamente de um repositório do GitHub nosso arquivo de configurações.
 
 >> Modelo Padrão: Mesmo depois de selecionar um modelo padrão você pode acessar o Infrastructure Composer para visualizá-lo \
 >> IAM: Embora você possa criar um stack sem uma função de serviço IAM, é recomendável usar uma para gerenciar permissões de forma mais segura e eficiente. Isso ajuda a evitar problemas de segurança e facilita a gestão de recursos.
