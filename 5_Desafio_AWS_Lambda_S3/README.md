@@ -45,16 +45,17 @@ _Inicialmente deve ser configurado o ambiente para execução do projeto, confor
 >>  Dica 1: Sempre faça as devidas configurações de regras e políticas de segurança em seus recursos criados. \
 >>  Dica 2: Esse modelo de projeto pode ser aplicado em diversos ambientes, um exemplo seria registro do controle de ponto digital de um funcionário, ou envio de um arquivo fiscal pela Web. \
 >>  Dica 3: Você pode fazer uma simulação do custo efetivo do seu projeto usando o AWS Pricing Calculator, isso irá lhe auxiliar a usar da melhor forma os recursos disponíveis com o custo mínimo necessário. \
->> Dica 4: Sempre desligue ou destrua seus recursos em caso da não necessidade de uso. \ 
+>> Dica 4: Sempre desligue ou destrua seus recursos em caso da não necessidade de uso.
+>>  
 
 ---
 
 ### 🎲 Resumo do aprendizado pós projeto: 
 
- ✔  _O LocalStack é uma ótima ferramenta para simulação de projetos para ambiente em nuvem da AWS_
- ✔  _Com um simples ambiente montado com recursos AWS podemos aplicar as tecnologias em vários cenários_
+ ✔  _O LocalStack é uma ótima ferramenta para simulação de projetos para ambiente em nuvem da AWS_ \
+ ✔  _Com um simples ambiente montado com recursos AWS podemos aplicar as tecnologias em vários cenários_ \
  ✔  _O AWS Lambda é uma poderosa ferramenta Serverless que pode ser usada até de forma avulsa._ \
- ✔  _Os buckets S3 são uma ótimo solução para armazenamento em nuvem_
+ ✔  _Os buckets S3 são uma ótimo solução para armazenamento em nuvem_ \
  ✔  _Todos os serviços AWS tem uma integração direcionada a melhor atender os requisitos das empresas_
 
 ---
