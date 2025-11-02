@@ -60,6 +60,9 @@ _Inicialmente deve ser configurado o ambiente para execução do projeto, confor
 ---
 ### Conteúdos:
 
-![Local Stack](https://github.com/vanspirineti/DIO_Desafios_Code_Girls/blob/34731324a21452af83c8a88f8b7c2d9d5ffc953c/4_Desafio_Automacao_CloudFormation/Codigo_Stack.yaml)
+![Local Stack](https://github.com/vanspirineti/DIO_Desafios_Code_Girls/blob/4195b2b7303ab84f84dd27952b93ded94cdd2786/5_Desafio_AWS_Lambda_S3/images/LocalStack_Painel.png)
+
+![Codigo](https://github.com/vanspirineti/DIO_Desafios_Code_Girls/blob/4195b2b7303ab84f84dd27952b93ded94cdd2786/5_Desafio_AWS_Lambda_S3/images/funcao_lambda.py)
+
 
 
