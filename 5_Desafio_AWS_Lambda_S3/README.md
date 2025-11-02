@@ -17,55 +17,49 @@ _Inicialmente deve ser configurado o ambiente para execução do projeto, confor
 
 >>  Dica 1: Antes da instalação do LocakStack é aconselhável instalar o Docker. É importante que tenhamos também o Python já instalado. \
 >>  Dica 2: Na página de Download do LocalStack tem instruções de instalação do Docker, e podemos fazer o registro de ambos com nossa conta do GitHub \
->>  Dica 3: Ao instalar o Docker precisei fazer a atualização do Windows Subsystem for Linux (WSL), o próprio Docker me forneceu o comando para rodar no PowerShell e fazer a atualização.
+>>  Dica 3: Ao instalar o Docker precisei fazer a atualização do Windows Subsystem for Linux (WSL), o próprio Docker me forneceu o comando para rodar no PowerShell e fazer a atualização. 
 
-🧭 _Vamos acompanhar os passos a seguir para criação de nosso ambiente de testes._ 
 
-1️⃣ Primeiro vamos acessar nossa conta AWS com um usuário que tenha as devidas permissões para elaboração de uma Stack e de recursos, assim podemos acessar o AWS Cloud Formation, sempre se certifique de estar na região correta para criação da stack e dos recursos.
 
-2️⃣ Selecionaremos a opção de criação de Stack, teremos a opção de criação a partir de um modelo, e faremos o upload do nosso arquivo YAML.
+🧭 _Vamos acompanhar os passos a seguir para criação de nosso ambiente._ 
 
-3️⃣ Após carregamento do arquivo podemos visualizar no Infrastructure Composer nossa stack, e lá mesmo, também temos acesso a edição de nosso código YAML, caso necessário faça as devidas alterações e, em seguida, clique em validar.
+1️⃣ Entender os conceitos do AWS S3 e Lambda. Usar o Drawio ou programa similar para fazer um modelo de fluxograma do seu projeto de efetivamente iniciar o projeto.
 
-![Infrastructure Composer](https://github.com/vanspirineti/DIO_Desafios_Code_Girls/blob/3c366093b97d338461080dac578cddfbb376f225/4_Desafio_Automacao_CloudFormation/images/Modelo_Infraestructure_Composer.PNG)
+2️⃣ Instalar o LocalStack versão gratuita na estação, antes é necessário instalar o Docker, na própria documentação do Localstack é fornecido um link para instalação do Docker e suas devidas configurações.
 
-4️⃣ Após todas as alterações necessárias, podemos seguir com a criação da Stack, será solicitado o nome que daremos a Stack que está sendo criada, e seus parâmetros.
+3️⃣ Verificar instalação com o comando *localstack --version* e iniciar o ambiente com *localstack start*
 
-![Detalhes Stack](https://github.com/vanspirineti/DIO_Desafios_Code_Girls/blob/3c366093b97d338461080dac578cddfbb376f225/4_Desafio_Automacao_CloudFormation/images/Detalhes_da_Stack.PNG)
+4️⃣ É importante fazer a configuração do token de acesso.
 
-5️⃣ Em seguida podemos selecionar Tags, opções da stack no caso de falhas, configurações de segurança e de notificações da Stack. Todas essas configurações podem ser importantes caso seu ambiente necessite ficar ativo por um tempo maior que o esperado.
+5️⃣ Agora podemos criar nossos rescursos, inicialmente deve ser criado o Bucket S3. Em seguida a tabela no DynamoDB e por fim as funções lambda
 
-6️⃣ O último passo é revisar todas as informações confirmar a criação da Stack.
+6️⃣ Devemos criar uma trigger no bucket S3 para chamar a função lambda toda vez que for feito o upload de um arquivo.
 
-7️⃣ Nesse momento todos os recursos serão criados automaticamente e poderão ser visualizados posteriormente no painel de gerenciamento.
+7️⃣ Por último devemos fazer o teste de execução do projeto, testando o upload do arquivo, disparo da função lambda e todos os eventos seguintes.
 
----
-### 🎲 Detalhes importantes pós criação da Stack: 
-
-☑️ _Destruição do Ambiente: Podemos excluir todos os recursos criados excluindo essa stack_
-☑️ _Reutilização: Com nosso código elaborado podemos recriar essa Stack sempre que necessário._ \
-☑️ _Controle de Alterações: Facilita o rastreamento de mudanças na infraestrutura, semelhante ao controle de versão de código._
+8️⃣ Acompanhar resultados nos logs do CloudWatch.
 
 ---
+#### 🥇 Dicas finais:
 
-### 🥇 Dicas:
-
->> 🔖 Temos a opção de criar no Infrastructure Composer uma base modelo para seu Stack , após validar,você pode salvar o arquivo YAML e editá-lo posteriormente conforme a necessidade. \
->> 🔖 IAM: Embora você possa criar um stack sem uma função de serviço IAM, é recomendável usar uma para gerenciar permissões de forma mais segura e eficiente. Isso ajuda a evitar problemas de segurança e facilita a gestão de recursos. \
->> 🔖 Para garantir que nada seja acidentalmente retido, evite usar a política de exclusão Retain para recursos de teste. Se você precisar reter dados (como logs ou resultados de testes), armazene-os em um bucket S3 ou outro serviço de armazenamento de longo prazo que não seja gerenciado pela stack de teste em si, ou use uma função Lambda para fazer backup antes da exclusão'  \
->> 🔖 _Você também pode configurar o agendamento automático da exclusão da stack usando uma combinação de Lambda e Amazon EventBridge, conforme sugerido em práticas da AWS, para impor um ciclo de vida efêmero para a infraestrutura de teste._
-   
----
-
-### 🎲 Integrações: 
-
- ✔ AWS CLI - Você pode usar a AWS CLI para interagir com o CloudFormation para criar, atualizar e excluir pilhas, entre outras operações. \
- ✔ AWS Management Console - Para criar um stack, você pode usar a interface do AWS Management Console. \
- ✔ AWS SDK -  O AWS SDK permite que você trabalhe com templates do CloudFormation. Você pode criar, atualizar ou excluir stacks usando os métodos disponíveis no SDK, que variam conforme a linguagem de programação que você está utilizando (como Python, Java, .NET, etc.).
+>>  Dica 1: Sempre faça as devidas configurações de regras e políticas de segurança em seus recursos criados. \
+>>  Dica 2: Esse modelo de projeto pode ser aplicado em diversos ambientes, um exemplo seria registro do controle de ponto digital de um funcionário, ou envio de um arquivo fiscal pela Web. \
+>>  Dica 3: Você pode fazer uma simulação do custo efetivo do seu projeto usando o AWS Pricing Calculator, isso irá lhe auxiliar a usar da melhor forma os recursos disponíveis com o custo mínimo necessário. \
+>> Dica 4: Sempre desligue ou destrua seus recursos em caso da não necessidade de uso. \ 
 
 ---
-### 🔮 Modelo YUML:
 
-![Codigo Stack](https://github.com/vanspirineti/DIO_Desafios_Code_Girls/blob/34731324a21452af83c8a88f8b7c2d9d5ffc953c/4_Desafio_Automacao_CloudFormation/Codigo_Stack.yaml)
+### 🎲 Resumo do aprendizado pós projeto: 
+
+ ✔  _O LocalStack é uma ótima ferramenta para simulação de projetos para ambiente em nuvem da AWS_
+ ✔  _Com um simples ambiente montado com recursos AWS podemos aplicar as tecnologias em vários cenários_
+ ✔  _O AWS Lambda é uma poderosa ferramenta Serverless que pode ser usada até de forma avulsa._ \
+ ✔  _Os buckets S3 são uma ótimo solução para armazenamento em nuvem_
+ ✔  _Todos os serviços AWS tem uma integração direcionada a melhor atender os requisitos das empresas_
+
+---
+### Conteúdos:
+
+![Local Stack](https://github.com/vanspirineti/DIO_Desafios_Code_Girls/blob/34731324a21452af83c8a88f8b7c2d9d5ffc953c/4_Desafio_Automacao_CloudFormation/Codigo_Stack.yaml)
 
 
