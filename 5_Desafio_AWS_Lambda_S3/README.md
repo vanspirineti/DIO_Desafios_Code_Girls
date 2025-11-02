@@ -1,0 +1,71 @@
+ # ✅ Quinto Desafio - Projeto de Automação com AWS Lambda + S3
+
+_Veremos abaixo a resolução do desafio 5 do Bootcamp Santander Code Girls 2025._ \
+_Será resumido a criação de uma insfraestrutura usando o LocalStack contendo os recursos: Bucket S3, DynamoDB e Lambda Function._ \
+_Esse projeto tem o intuíto de executar a seguintes tarefas:_ \
+_* Disparar uma função lambda quando o usuário fizer o upload do arquivo no Bucket S3_ \
+_* A função lambda deve processar os dados do arquivo e fazer um insert no DynamoDB_  \
+_* Outra função Lambda vai consultar a tabela e expor os dados por meio de um API Gateway_ \
+\
+_Inicialmente deve ser configurado o ambiente para execução do projeto, conforme descrito abaixo:_ 
+
+---
+
+## ⚙️ Configuração do Ambiente.
+
+#### 🥇 Dicas iniciais:
+
+>>  Dica 1: Antes da instalação do LocakStack é aconselhável instalar o Docker. É importante que tenhamos também o Python já instalado. \
+>>  Dica 2: Na página de Download do LocalStack tem instruções de instalação do Docker, e podemos fazer o registro de ambos com nossa conta do GitHub \
+>>  Dica 3: Ao instalar o Docker precisei fazer a atualização do Windows Subsystem for Linux (WSL), o próprio Docker me forneceu o comando para rodar no PowerShell e fazer a atualização.
+
+🧭 _Vamos acompanhar os passos a seguir para criação de nosso ambiente de testes._ 
+
+1️⃣ Primeiro vamos acessar nossa conta AWS com um usuário que tenha as devidas permissões para elaboração de uma Stack e de recursos, assim podemos acessar o AWS Cloud Formation, sempre se certifique de estar na região correta para criação da stack e dos recursos.
+
+2️⃣ Selecionaremos a opção de criação de Stack, teremos a opção de criação a partir de um modelo, e faremos o upload do nosso arquivo YAML.
+
+3️⃣ Após carregamento do arquivo podemos visualizar no Infrastructure Composer nossa stack, e lá mesmo, também temos acesso a edição de nosso código YAML, caso necessário faça as devidas alterações e, em seguida, clique em validar.
+
+![Infrastructure Composer](https://github.com/vanspirineti/DIO_Desafios_Code_Girls/blob/3c366093b97d338461080dac578cddfbb376f225/4_Desafio_Automacao_CloudFormation/images/Modelo_Infraestructure_Composer.PNG)
+
+4️⃣ Após todas as alterações necessárias, podemos seguir com a criação da Stack, será solicitado o nome que daremos a Stack que está sendo criada, e seus parâmetros.
+
+![Detalhes Stack](https://github.com/vanspirineti/DIO_Desafios_Code_Girls/blob/3c366093b97d338461080dac578cddfbb376f225/4_Desafio_Automacao_CloudFormation/images/Detalhes_da_Stack.PNG)
+
+5️⃣ Em seguida podemos selecionar Tags, opções da stack no caso de falhas, configurações de segurança e de notificações da Stack. Todas essas configurações podem ser importantes caso seu ambiente necessite ficar ativo por um tempo maior que o esperado.
+
+6️⃣ O último passo é revisar todas as informações confirmar a criação da Stack.
+
+7️⃣ Nesse momento todos os recursos serão criados automaticamente e poderão ser visualizados posteriormente no painel de gerenciamento.
+
+---
+### 🎲 Detalhes importantes pós criação da Stack: 
+
+☑️ _Destruição do Ambiente: Podemos excluir todos os recursos criados excluindo essa stack_
+☑️ _Reutilização: Com nosso código elaborado podemos recriar essa Stack sempre que necessário._ \
+☑️ _Controle de Alterações: Facilita o rastreamento de mudanças na infraestrutura, semelhante ao controle de versão de código._
+
+---
+
+### 🥇 Dicas:
+
+>> 🔖 Temos a opção de criar no Infrastructure Composer uma base modelo para seu Stack , após validar,você pode salvar o arquivo YAML e editá-lo posteriormente conforme a necessidade. \
+>> 🔖 IAM: Embora você possa criar um stack sem uma função de serviço IAM, é recomendável usar uma para gerenciar permissões de forma mais segura e eficiente. Isso ajuda a evitar problemas de segurança e facilita a gestão de recursos. \
+>> 🔖 Para garantir que nada seja acidentalmente retido, evite usar a política de exclusão Retain para recursos de teste. Se você precisar reter dados (como logs ou resultados de testes), armazene-os em um bucket S3 ou outro serviço de armazenamento de longo prazo que não seja gerenciado pela stack de teste em si, ou use uma função Lambda para fazer backup antes da exclusão'  \
+>> 🔖 _Você também pode configurar o agendamento automático da exclusão da stack usando uma combinação de Lambda e Amazon EventBridge, conforme sugerido em práticas da AWS, para impor um ciclo de vida efêmero para a infraestrutura de teste._
+   
+---
+
+### 🎲 Integrações: 
+
+ ✔ AWS CLI - Você pode usar a AWS CLI para interagir com o CloudFormation para criar, atualizar e excluir pilhas, entre outras operações. \
+ ✔ AWS Management Console - Para criar um stack, você pode usar a interface do AWS Management Console. \
+ ✔ AWS SDK -  O AWS SDK permite que você trabalhe com templates do CloudFormation. Você pode criar, atualizar ou excluir stacks usando os métodos disponíveis no SDK, que variam conforme a linguagem de programação que você está utilizando (como Python, Java, .NET, etc.).
+
+---
+### 🔮 Modelo YUML:
+
+![Codigo Stack](https://github.com/vanspirineti/DIO_Desafios_Code_Girls/blob/34731324a21452af83c8a88f8b7c2d9d5ffc953c/4_Desafio_Automacao_CloudFormation/Codigo_Stack.yaml)
+
+
