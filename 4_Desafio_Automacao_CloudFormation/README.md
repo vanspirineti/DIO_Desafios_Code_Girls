@@ -9,11 +9,11 @@ _Com nosso template de código YAML o ambiente pode ser criado, usado e destruí
 
 ## ⚙️ Passo a passo da implantação.
 
-_A criação de uma stack é relativamente simples, se tiver todos os parâmetros de sua criação pré-definidos, é sempre aconselhável fazer uma mapeamento detalhado de sua stack. Para análise de uso e redução de custos na criaçõ de recursos dentro da AWS._ \
+_A criação de uma stack é relativamente simples, se tiver todos os parâmetros de sua criação pré-definidos, é sempre aconselhável fazer uma mapeamento detalhado de sua stack. Para análise de uso e redução de custos na criação de recursos dentro da AWS._ 
 
-_Vamos acompanhar os passos a seguir para criação de nosso ambiente de testes._ \
+_Vamos acompanhar os passos a seguir para criação de nosso ambiente de testes._ 
 
-1️⃣ Primeiro vamos acessar nossa conta AWS com um usuário que tenha as devidas permições para criação de uma Stack e de recursos, assim podemos acessar o AWS Cloud Formation, sempre se certifique de estar na região correta para criação da stack e dos recursos.
+1️⃣ Primeiro vamos acessar nossa conta AWS com um usuário que tenha as devidas permissões para elaboração de uma Stack e de recursos, assim podemos acessar o AWS Cloud Formation, sempre se certifique de estar na região correta para criação da stack e dos recursos.
 
 2️⃣ Selecionaremos a opção de criação de Stack, teremos a opção de criação a partir de um modelo, e faremos o upload do nosso arquivo YAML.
 
