@@ -1,0 +1,77 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Modelo de CloudFormation para um ambiente de teste efêmero com uma VPC e uma instância EC2.
+
+Parameters:
+  InstanceType:
+    Description: Tipo da instância EC2 a ser lançada
+    Type: String
+    Default: t2.micro
+    ConstraintDescription: Deve ser um tipo de instância EC2 válido.
+  
+  LatestAmiId:
+    Type: AWS::SSM::Parameter::Value<String>
+    Default: /aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2
+    Description: ID da AMI Linux 2 mais recente fornecida pelo SSM Parameter Store.
+
+Resources:
+  TestVPC:
+    Type: AWS::EC2::VPC
+    Properties:
+      CidrBlock: 10.0.0.0/16
+      EnableDnsSupport: true
+      EnableDnsHostnames: true
+      Tags:
+        - Key: Name
+          Value: TestVPC
+        - Key: Environment
+          Value: TestEphemeral
+
+  TestSubnet:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: !Ref TestVPC
+      CidrBlock: 10.0.1.0/24
+      AvailabilityZone: !Select [ 0, !GetAZs '' ]
+      Tags:
+        - Key: Name
+          Value: TestSubnet
+
+  TestSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Habilita acesso SSH e HTTP para a instância de teste.
+      VpcId: !Ref TestVPC
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 22
+          ToPort: 22
+          CidrIp: 0.0.0.0/0 # Ajuste para um IP específico, se necessário, por segurança
+        - IpProtocol: tcp
+          FromPort: 80
+          ToPort: 80
+          CidrIp: 0.0.0.0/0
+      Tags:
+        - Key: Name
+          Value: TestSG
+
+  TestEC2Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      InstanceType: t2.micro
+      ImageId: ami-0bdd88bd06d16ba03
+      SubnetId: !Ref TestSubnet
+      SecurityGroupIds:
+        - !Ref TestSecurityGroup
+      Tags:
+        - Key: Name
+          Value: TestInstance
+        - Key: Environment
+          Value: TestEphemeral
+
+Outputs:
+  InstancePublicIp:
+    Description: Endereço IP público da instância EC2 de teste
+    Value: !GetAtt TestEC2Instance.PublicIp
+  VpcId:
+    Description: ID da VPC de teste
+    Value: !Ref TestVPC
