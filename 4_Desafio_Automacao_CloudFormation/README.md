@@ -38,6 +38,8 @@ _A criação de uma stack é relativamente simples, se tiver todos os parâmetro
 ☑️ _Reutilização: Com nosso código elaborado podemos recriar essa Stack sempre que necessário._ \
 ☑️ _Controle de Alterações: Facilita o rastreamento de mudanças na infraestrutura, semelhante ao controle de versão de código._
 
+---
+
 ### 🥇 Dicas:
 
 >> 🔖 Temos a opção de criar no Infrastructure Composer uma base modelo para seu Stack , após validar,você pode salvar o arquivo YAML e editá-lo posteriormente conforme a necessidade. \
