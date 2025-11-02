@@ -27,9 +27,9 @@ _Inicialmente deve ser configurado o ambiente para execução do projeto, confor
 
 2️⃣ Instalar o LocalStack versão gratuita na estação, antes é necessário instalar o Docker, na própria documentação do Localstack é fornecido um link para instalação do Docker e suas devidas configurações.
 
-3️⃣ Verificar instalação com o comando *localstack --version* e iniciar o ambiente com *localstack start*
+3️⃣ Verificar instalação com o comando *localstack --version* , atualizar o localstack com *localstack update all* e iniciar o ambiente com *localstack start*
 
-4️⃣ É importante fazer a configuração do token de acesso.
+4️⃣ É importante fazer a configuração do token de acesso e AWS CLI Local.
 
 5️⃣ Agora podemos criar nossos rescursos, inicialmente deve ser criado o Bucket S3. Em seguida a tabela no DynamoDB e por fim as funções lambda
 
