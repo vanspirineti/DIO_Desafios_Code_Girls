@@ -58,6 +58,6 @@ _A criação de uma stack é relativamente simples, se tiver todos os parâmetro
 ---
 ### 🔮 Modelo YUML:
 
-![YUML](https://github.com/vanspirineti/DIO_Desafios_Code_Girls/blob/5daae0f2f90d27f6695398f85c94d40e1b248733/3_Desafio_CloudFormation/template.yaml)
+![Codigo Stack](https://github.com/vanspirineti/DIO_Desafios_Code_Girls/blob/34731324a21452af83c8a88f8b7c2d9d5ffc953c/4_Desafio_Automacao_CloudFormation/Codigo_Stack.yaml)
 
 
